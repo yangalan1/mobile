@@ -1,0 +1,182 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Inter', Helvetica, sans-serif;
+    color: black;
+    margin: 0 10% 0 10%;
+	padding:1%;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+h1{
+	font-weight: 700;
+    font-size: 45px;
+    letter-spacing: -0.99px;
+}
+
+h2{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    color: #111111;
+}
+
+h3{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 32px;
+    color: #111111;
+}
+
+p, h1, h2, h3, .skip {
+    padding: 10px;
+}
+
+nav{
+	border-bottom: 2px solid grey;
+	margin-bottom: 15px;
+    padding: 10px 0 20px 0;
+    line-height: 35px;
+}
+
+footer{
+    border-top: 2px solid grey;
+}
+
+.skip{
+    color: black;
+}
+
+/* 4. Style the links to in your site - make sure to indicate which one is the current page */
+
+/* .nav_links{
+    list-style:none;
+    margin:0;
+    padding:0;
+    text-align:center;
+} */
+
+/* .nav_links li{
+    display:inline;
+}
+.nav_links a{
+    display:inline-block;
+    padding: 5px;
+} */
+
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+}
+
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+.nav_links a:hover {
+    color: #515151;
+}
+
+.skip:hover{
+    color: #515151;
+}
+
+.active{
+    background-color: #fee6e3;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px black;
+    padding: 5px;
+    cursor: pointer;
+}
+
+a:visited{color: black}
+a:link{text-decoration: none}
+
+.gallery{
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap;  
+}
+
+/* 5. Add style to your images focusing on the box model. */
+
+div img{
+    margin: 12px;
+    width: 250px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.card{
+    border: 3px solid black;
+    border-radius: 15px;
+    width: 35%;
+    text-align:center;
+    padding: 4px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-basis: 450px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    float:center;
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.container {
+    padding: 5px;
+    text-align: left;
+}
+
+.leaders {
+    display: flex;
+    justify-content: space-evenly;  
+    flex-wrap: wrap;
+}
+
+/* 6. Add a hover style to your images 
+
+div img:nth-child(even):hover{
+    box-shadow: 5px 5px black;
+    filter: hue-rotate(45deg);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.flags_one img:hover:nth-child(3n){
+    box-shadow: 5px 5px tan;
+    border: 3px solid #654321;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.flags_two img:hover:nth-child(3n){
+    box-shadow: 5px 5px tan;
+    border: 3px solid #654321;
+    filter: hue-rotate(45deg);
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.flags_three img:hover:nth-child(3n){
+    box-shadow: 5px 5px tan;
+    border: 3px solid #654321;
+    filter: grayscale(50%);
+    transition: box-shadow 0.2s ease-in-out;
+} */
+
