@@ -1,20 +1,15 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
-body {
+body{
     font-family: 'Inter', Helvetica, sans-serif;
     color: black;
-    margin: 0 10% 0 10%;
-	padding:1%;
-    font-weight: 400;
-    font-size: 18px;
 }
 
 p{
     font-weight: 400;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
-    letter-spacing: normal;
     color: #444444;
 }
 
@@ -43,42 +38,53 @@ p, h1, h2, h3, .skip {
 }
 
 nav{
-	border-bottom: 2px solid grey;
-	margin-bottom: 15px;
-    padding: 10px 0 20px 0;
+	border-bottom: 3px solid black;
+    padding: 10px 0 10px 0;
     line-height: 35px;
+    font-size: 18px;
+}
+
+main{
+    padding: 0 8% 5% 8%;
+}
+
+.hero{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url("../images/hero.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.hero h1{
+    font-size: 5em;
+    font-weight: 900;
 }
 
 footer{
-    border-top: 2px solid grey;
+    border-top: 3px solid black;
+}
+
+.icons{
+    text-align: center;
 }
 
 .skip{
     color: black;
+    display: none;
 }
-
-/* 4. Style the links to in your site - make sure to indicate which one is the current page */
-
-/* .nav_links{
-    list-style:none;
-    margin:0;
-    padding:0;
-    text-align:center;
-} */
-
-/* .nav_links li{
-    display:inline;
-}
-.nav_links a{
-    display:inline-block;
-    padding: 5px;
-} */
 
 header{
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 10px;
+    /* padding: 10px; */
 }
 
 .nav_links{
@@ -87,7 +93,8 @@ header{
 }
 
 .nav_links a:hover {
-    color: #515151;
+    color: black;
+    opacity: 50%;
 }
 
 .skip:hover{
@@ -96,10 +103,9 @@ header{
 
 .active{
     background-color: #fee6e3;
-    border: 2px solid black;
+    padding-left: 10px;
+    padding-right: 10px;
     border-radius: 10px;
-    box-shadow: 3px 3px black;
-    padding: 5px;
     cursor: pointer;
 }
 
@@ -121,12 +127,12 @@ div img{
     border-radius: 20px;
 }
 
+
 .card{
     border: 3px solid black;
     border-radius: 15px;
     width: 35%;
-    text-align:center;
-    padding: 4px;
+    text-align: center;
     margin-bottom: 16px;
     display: flex;
     flex-basis: 450px;
@@ -135,10 +141,14 @@ div img{
 }
 
 .card img{
-    float:center;
-    width: 200px;
-    height: 250px;
+    margin: 0;
+    float: center;
+    width: 100%;
+    height: 400px;
     object-fit: cover;
+    border: none;
+    border-bottom: 3px solid black;
+    border-radius: 15px 15px 0px 0px;
 }
 
 .container {
@@ -150,33 +160,62 @@ div img{
     display: flex;
     justify-content: space-evenly;  
     flex-wrap: wrap;
+    margin: 10px 0 10px 0;
 }
 
-/* 6. Add a hover style to your images 
-
-div img:nth-child(even):hover{
-    box-shadow: 5px 5px black;
-    filter: hue-rotate(45deg);
-    transition: box-shadow 0.2s ease-in-out;
+/* icons for footer */
+.fa-brands{
+    padding: 1%;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: black;
+    opacity: 0.5;
+    transition: 0.3s;
 }
 
-.flags_one img:hover:nth-child(3n){
-    box-shadow: 5px 5px tan;
-    border: 3px solid #654321;
-    transition: box-shadow 0.2s ease-in-out;
+.fa-brands:hover{
+    color: black;
+    opacity: 1;
 }
 
-.flags_two img:hover:nth-child(3n){
-    box-shadow: 5px 5px tan;
-    border: 3px solid #654321;
-    filter: hue-rotate(45deg);
-    transition: box-shadow 0.2s ease-in-out;
+/* icon for the button */
+.fa-arrow-right-long{
+    margin-left: 6px;
 }
 
-.flags_three img:hover:nth-child(3n){
-    box-shadow: 5px 5px tan;
-    border: 3px solid #654321;
-    filter: grayscale(50%);
-    transition: box-shadow 0.2s ease-in-out;
-} */
+footer-end{
+    text-align: center;
+}
 
+.button{
+    background-color: #fff5df;
+    border-radius: 10px;
+    border: 2px solid black;
+    color: black;
+    padding: 15px 32px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: 8px 8px black;
+    transition: 0.3s;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.button:hover{
+    box-shadow: none;
+}
+
+
+@media screen and (min-width: 900px){
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
