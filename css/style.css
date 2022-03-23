@@ -118,9 +118,9 @@ a:visited {
   }
 
 .gallery{
-    display: flex;
-    justify-content: space-around;  
-    flex-wrap: wrap;  
+    display: grid;
+    columns: 1;
+    justify-content: center;
 }
 
 /* 5. Add style to your images focusing on the box model. */
@@ -215,22 +215,17 @@ footer-end{
 }
 
 
-/* .form-styling{
-
-} */
-
 .formwrap{
     width: 790px;
     background: #fee6e3;
     border-radius: 10px;
     border: 2px solid black;
     overflow: hidden;
-    padding: 50px;
+    padding: 5%;
+    margin-top: 20px;
 }
 
 .containercontact{
-    padding-top: 40px;
-    padding-bottom: 0px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -251,41 +246,39 @@ legend{
 
 label{
     display: inline-block;
-    margin-right:10px;
-    width:15%;
+    width:100%;
     text-align: left;
 }
 
 input{
-    width: 30%;
+    width: 100%;
     padding: 15px 10px 15px 20px;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
-    margin: 8px 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
     display: inline-block;
+    justify-content: center;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
 }
 
 textarea{
-    width: 30%;
+    width: 100%;
     padding: 15px 10px 15px 20px;
     font-family: 'Inter';
     font-weight: 400;
     font-size: 16px;
-    margin: 8px 8px;
+    margin-top: 8px;
+    margin-bottom: 12px;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-sizing: border-box;
     min-height: 75px;
-}
-
-input[type=checkbox]{
-    display:inline;
-    width:inherit;
+    resize: vertical;
 }
 
 input[type=submit] {
@@ -294,7 +287,7 @@ input[type=submit] {
     border: 2px solid black;
     color: black;
     padding: 15px 32px;
-    margin-top: 30px;
+    margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
     display: inline-block;
@@ -308,6 +301,25 @@ input[type=submit] {
     box-shadow: none;
   }
 
+  @keyframes bounce { 
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+  }
+   
+  .bounce img{
+    animation: bounce 0.8s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    width: 30px;
+    border: none;
+  }
+
+@media screen and (prefers-reduced-motion: reduce){
+    .bounce img{
+        animation: none;
+    }
+}
+
 @media screen and (min-width: 900px){
 
     .nav_links{
@@ -320,4 +332,9 @@ input[type=submit] {
         display: inline-block;
     }
 
+    .gallery{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;  
+    }
 }
