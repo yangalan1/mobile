@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
 
+*{
+    max-width: 100%;
+}
+
 body{
     font-family: 'Inter', Helvetica, sans-serif;
     color: black;
@@ -76,7 +80,8 @@ footer{
 }
 
 .skip{
-    display: none;
+    position: absolute;
+    left: -500px;
 }
 
 header{
@@ -118,9 +123,9 @@ a:visited {
   }
 
 .gallery{
-    display: grid;
-    columns: 1;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 5. Add style to your images focusing on the box model. */
@@ -132,6 +137,17 @@ div img{
     border-radius: 20px;
 }
 
+.all_flags{
+    display: grid;
+    grid-template-columns: 32% 68%;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+.all_flags img{
+    margin: 0px;
+}
 
 .card{
     border: 3px solid black;
